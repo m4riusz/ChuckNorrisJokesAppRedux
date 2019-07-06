@@ -3,18 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6F315BC022D1083300360BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315BBF22D1083300360BBC /* AppDelegate.swift */; };
-		6F315BC222D1083300360BBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315BC122D1083300360BBC /* ViewController.swift */; };
-		6F315BC522D1083300360BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F315BC322D1083300360BBC /* Main.storyboard */; };
-		6F315BC822D1083300360BBC /* ChuckNorrisJokesAppRedux.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F315BC622D1083300360BBC /* ChuckNorrisJokesAppRedux.xcdatamodeld */; };
 		6F315BCA22D1083400360BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F315BC922D1083400360BBC /* Assets.xcassets */; };
 		6F315BCD22D1083400360BBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F315BCB22D1083400360BBC /* LaunchScreen.storyboard */; };
 		6F315BD822D1083400360BBC /* ChuckNorrisJokesAppReduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315BD722D1083400360BBC /* ChuckNorrisJokesAppReduxTests.swift */; };
 		6F315BE322D1083400360BBC /* ChuckNorrisJokesAppReduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315BE222D1083400360BBC /* ChuckNorrisJokesAppReduxUITests.swift */; };
+		6F315BF422D10A2D00360BBC /* JokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315BF322D10A2D00360BBC /* JokeController.swift */; };
+		6F315BF622D10A4A00360BBC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315BF522D10A4A00360BBC /* MainController.swift */; };
+		6F315BF922D10B0300360BBC /* JokesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315BF822D10B0300360BBC /* JokesController.swift */; };
+		6F315BFC22D10BD900360BBC /* JokeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315BFB22D10BD900360BBC /* JokeService.swift */; };
+		6F315C0122D10E1100360BBC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C0022D10E1100360BBC /* AppState.swift */; };
+		6F315C0322D10E2200360BBC /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C0222D10E2200360BBC /* AppReducer.swift */; };
+		6F315C0622D10E5100360BBC /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C0522D10E5100360BBC /* Store.swift */; };
+		6F315C0922D10F5000360BBC /* JokeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C0822D10F5000360BBC /* JokeState.swift */; };
+		6F315C2422D1162400360BBC /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C2022D1162400360BBC /* Joke.swift */; };
+		6F315C2922D118D100360BBC /* JokeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C2822D118D100360BBC /* JokeActions.swift */; };
+		6F315C2B22D11B3200360BBC /* JokesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C2A22D11B3200360BBC /* JokesReducer.swift */; };
+		CF3006CEF90586BB36C62672 /* Pods_ChuckNorrisJokesAppReduxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4B475701044C5161402A77 /* Pods_ChuckNorrisJokesAppReduxTests.framework */; };
+		EEEE08C42A5163BE24D46E97 /* Pods_ChuckNorrisJokesAppRedux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890B4E7DC455C9C0C6563E5A /* Pods_ChuckNorrisJokesAppRedux.framework */; };
+		FEA8B21182F797D40D63DC24 /* Pods_ChuckNorrisJokesAppReduxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2462C51A9129F0118D3593E6 /* Pods_ChuckNorrisJokesAppReduxUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4B475701044C5161402A77 /* Pods_ChuckNorrisJokesAppReduxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisJokesAppReduxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2462C51A9129F0118D3593E6 /* Pods_ChuckNorrisJokesAppReduxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisJokesAppReduxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26FE2E3C4AEDA8EA7E102E1F /* Pods-ChuckNorrisJokesAppReduxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisJokesAppReduxTests.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisJokesAppReduxTests/Pods-ChuckNorrisJokesAppReduxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3242D8BA9E78D3CF487C55C3 /* Pods-ChuckNorrisJokesAppReduxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisJokesAppReduxTests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisJokesAppReduxTests/Pods-ChuckNorrisJokesAppReduxTests.release.xcconfig"; sourceTree = "<group>"; };
+		451387F0A7F35B50C787C985 /* Pods-ChuckNorrisJokesAppRedux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisJokesAppRedux.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisJokesAppRedux/Pods-ChuckNorrisJokesAppRedux.release.xcconfig"; sourceTree = "<group>"; };
+		4994C486512D8A50D2FBD074 /* Pods-ChuckNorrisJokesAppRedux.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisJokesAppRedux.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisJokesAppRedux/Pods-ChuckNorrisJokesAppRedux.debug.xcconfig"; sourceTree = "<group>"; };
+		4E51473047F1A8CEFC681FBD /* Pods-ChuckNorrisJokesAppReduxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisJokesAppReduxUITests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisJokesAppReduxUITests/Pods-ChuckNorrisJokesAppReduxUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6F315BBC22D1083300360BBC /* ChuckNorrisJokesAppRedux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisJokesAppRedux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F315BBF22D1083300360BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F315BC122D1083300360BBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6F315BC422D1083300360BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6F315BC722D1083300360BBC /* ChuckNorrisJokesAppRedux.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChuckNorrisJokesAppRedux.xcdatamodel; sourceTree = "<group>"; };
 		6F315BC922D1083400360BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F315BCC22D1083400360BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F315BCE22D1083400360BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +64,19 @@
 		6F315BDE22D1083400360BBC /* ChuckNorrisJokesAppReduxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisJokesAppReduxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F315BE222D1083400360BBC /* ChuckNorrisJokesAppReduxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisJokesAppReduxUITests.swift; sourceTree = "<group>"; };
 		6F315BE422D1083400360BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F315BF322D10A2D00360BBC /* JokeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeController.swift; sourceTree = "<group>"; };
+		6F315BF522D10A4A00360BBC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		6F315BF822D10B0300360BBC /* JokesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesController.swift; sourceTree = "<group>"; };
+		6F315BFB22D10BD900360BBC /* JokeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeService.swift; sourceTree = "<group>"; };
+		6F315C0022D10E1100360BBC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		6F315C0222D10E2200360BBC /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		6F315C0522D10E5100360BBC /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		6F315C0822D10F5000360BBC /* JokeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeState.swift; sourceTree = "<group>"; };
+		6F315C2022D1162400360BBC /* Joke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		6F315C2822D118D100360BBC /* JokeActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeActions.swift; sourceTree = "<group>"; };
+		6F315C2A22D11B3200360BBC /* JokesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesReducer.swift; sourceTree = "<group>"; };
+		890B4E7DC455C9C0C6563E5A /* Pods_ChuckNorrisJokesAppRedux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisJokesAppRedux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA91E1618D52C74CC45375E /* Pods-ChuckNorrisJokesAppReduxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisJokesAppReduxUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisJokesAppReduxUITests/Pods-ChuckNorrisJokesAppReduxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEE08C42A5163BE24D46E97 /* Pods_ChuckNorrisJokesAppRedux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF3006CEF90586BB36C62672 /* Pods_ChuckNorrisJokesAppReduxTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +100,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA8B21182F797D40D63DC24 /* Pods_ChuckNorrisJokesAppReduxUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3399F851489DBC9ABBF062F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				890B4E7DC455C9C0C6563E5A /* Pods_ChuckNorrisJokesAppRedux.framework */,
+				0F4B475701044C5161402A77 /* Pods_ChuckNorrisJokesAppReduxTests.framework */,
+				2462C51A9129F0118D3593E6 /* Pods_ChuckNorrisJokesAppReduxUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63323F13B5F48F019AC3ADB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4994C486512D8A50D2FBD074 /* Pods-ChuckNorrisJokesAppRedux.debug.xcconfig */,
+				451387F0A7F35B50C787C985 /* Pods-ChuckNorrisJokesAppRedux.release.xcconfig */,
+				26FE2E3C4AEDA8EA7E102E1F /* Pods-ChuckNorrisJokesAppReduxTests.debug.xcconfig */,
+				3242D8BA9E78D3CF487C55C3 /* Pods-ChuckNorrisJokesAppReduxTests.release.xcconfig */,
+				BEA91E1618D52C74CC45375E /* Pods-ChuckNorrisJokesAppReduxUITests.debug.xcconfig */,
+				4E51473047F1A8CEFC681FBD /* Pods-ChuckNorrisJokesAppReduxUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6F315BB322D1083300360BBC = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +137,8 @@
 				6F315BD622D1083400360BBC /* ChuckNorrisJokesAppReduxTests */,
 				6F315BE122D1083400360BBC /* ChuckNorrisJokesAppReduxUITests */,
 				6F315BBD22D1083300360BBC /* Products */,
+				63323F13B5F48F019AC3ADB5 /* Pods */,
+				3399F851489DBC9ABBF062F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +155,16 @@
 		6F315BBE22D1083300360BBC /* ChuckNorrisJokesAppRedux */ = {
 			isa = PBXGroup;
 			children = (
+				6F315C0A22D1104900360BBC /* Models */,
+				6F315BFA22D10BC800360BBC /* Repository */,
+				6F315BF722D10ADA00360BBC /* Jokes */,
+				6F315BF222D10A1600360BBC /* Main */,
+				6F315BF122D10A0B00360BBC /* Redux */,
+				6F315BF022D109E000360BBC /* Joke */,
 				6F315BBF22D1083300360BBC /* AppDelegate.swift */,
-				6F315BC122D1083300360BBC /* ViewController.swift */,
-				6F315BC322D1083300360BBC /* Main.storyboard */,
 				6F315BC922D1083400360BBC /* Assets.xcassets */,
 				6F315BCB22D1083400360BBC /* LaunchScreen.storyboard */,
 				6F315BCE22D1083400360BBC /* Info.plist */,
-				6F315BC622D1083300360BBC /* ChuckNorrisJokesAppRedux.xcdatamodeld */,
 			);
 			path = ChuckNorrisJokesAppRedux;
 			sourceTree = "<group>";
@@ -128,6 +187,91 @@
 			path = ChuckNorrisJokesAppReduxUITests;
 			sourceTree = "<group>";
 		};
+		6F315BF022D109E000360BBC /* Joke */ = {
+			isa = PBXGroup;
+			children = (
+				6F315BF322D10A2D00360BBC /* JokeController.swift */,
+			);
+			path = Joke;
+			sourceTree = "<group>";
+		};
+		6F315BF122D10A0B00360BBC /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				6F315C0722D10F2800360BBC /* Stores */,
+				6F315BFF22D10DFF00360BBC /* Actions */,
+				6F315BFE22D10DF900360BBC /* Reducers */,
+				6F315BFD22D10DF400360BBC /* States */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		6F315BF222D10A1600360BBC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6F315BF522D10A4A00360BBC /* MainController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6F315BF722D10ADA00360BBC /* Jokes */ = {
+			isa = PBXGroup;
+			children = (
+				6F315BF822D10B0300360BBC /* JokesController.swift */,
+			);
+			path = Jokes;
+			sourceTree = "<group>";
+		};
+		6F315BFA22D10BC800360BBC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				6F315BFB22D10BD900360BBC /* JokeService.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		6F315BFD22D10DF400360BBC /* States */ = {
+			isa = PBXGroup;
+			children = (
+				6F315C0022D10E1100360BBC /* AppState.swift */,
+				6F315C0822D10F5000360BBC /* JokeState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		6F315BFE22D10DF900360BBC /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				6F315C0222D10E2200360BBC /* AppReducer.swift */,
+				6F315C2A22D11B3200360BBC /* JokesReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		6F315BFF22D10DFF00360BBC /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				6F315C2822D118D100360BBC /* JokeActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		6F315C0722D10F2800360BBC /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				6F315C0522D10E5100360BBC /* Store.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		6F315C0A22D1104900360BBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F315C2022D1162400360BBC /* Joke.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F315BE722D1083400360BBC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesAppRedux" */;
 			buildPhases = (
+				7A8076E856A62A8D4E480584 /* [CP] Check Pods Manifest.lock */,
 				6F315BB822D1083300360BBC /* Sources */,
 				6F315BB922D1083300360BBC /* Frameworks */,
 				6F315BBA22D1083300360BBC /* Resources */,
+				731BAA9D0D9881DFCA50634C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +298,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F315BEA22D1083400360BBC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesAppReduxTests" */;
 			buildPhases = (
+				4AF0C199181830CA8F52262A /* [CP] Check Pods Manifest.lock */,
 				6F315BCF22D1083400360BBC /* Sources */,
 				6F315BD022D1083400360BBC /* Frameworks */,
 				6F315BD122D1083400360BBC /* Resources */,
@@ -170,6 +317,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F315BED22D1083400360BBC /* Build configuration list for PBXNativeTarget "ChuckNorrisJokesAppReduxUITests" */;
 			buildPhases = (
+				4C06CB949C8A06F8F742FC88 /* [CP] Check Pods Manifest.lock */,
 				6F315BDA22D1083400360BBC /* Sources */,
 				6F315BDB22D1083400360BBC /* Frameworks */,
 				6F315BDC22D1083400360BBC /* Resources */,
@@ -234,7 +382,6 @@
 			files = (
 				6F315BCD22D1083400360BBC /* LaunchScreen.storyboard in Resources */,
 				6F315BCA22D1083400360BBC /* Assets.xcassets in Resources */,
-				6F315BC522D1083300360BBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +401,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4AF0C199181830CA8F52262A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChuckNorrisJokesAppReduxTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C06CB949C8A06F8F742FC88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChuckNorrisJokesAppReduxUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		731BAA9D0D9881DFCA50634C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisJokesAppRedux/Pods-ChuckNorrisJokesAppRedux-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisJokesAppRedux/Pods-ChuckNorrisJokesAppRedux-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisJokesAppRedux/Pods-ChuckNorrisJokesAppRedux-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A8076E856A62A8D4E480584 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChuckNorrisJokesAppRedux-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6F315BB822D1083300360BBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F315BC222D1083300360BBC /* ViewController.swift in Sources */,
-				6F315BC822D1083300360BBC /* ChuckNorrisJokesAppRedux.xcdatamodeld in Sources */,
+				6F315BF622D10A4A00360BBC /* MainController.swift in Sources */,
+				6F315C2922D118D100360BBC /* JokeActions.swift in Sources */,
+				6F315C0122D10E1100360BBC /* AppState.swift in Sources */,
+				6F315C0622D10E5100360BBC /* Store.swift in Sources */,
+				6F315C2422D1162400360BBC /* Joke.swift in Sources */,
+				6F315C0922D10F5000360BBC /* JokeState.swift in Sources */,
+				6F315BF422D10A2D00360BBC /* JokeController.swift in Sources */,
+				6F315C2B22D11B3200360BBC /* JokesReducer.swift in Sources */,
 				6F315BC022D1083300360BBC /* AppDelegate.swift in Sources */,
+				6F315BFC22D10BD900360BBC /* JokeService.swift in Sources */,
+				6F315C0322D10E2200360BBC /* AppReducer.swift in Sources */,
+				6F315BF922D10B0300360BBC /* JokesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +539,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6F315BC322D1083300360BBC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6F315BC422D1083300360BBC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6F315BCB22D1083400360BBC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -434,6 +668,7 @@
 		};
 		6F315BE822D1083400360BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4994C486512D8A50D2FBD074 /* Pods-ChuckNorrisJokesAppRedux.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +687,7 @@
 		};
 		6F315BE922D1083400360BBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 451387F0A7F35B50C787C985 /* Pods-ChuckNorrisJokesAppRedux.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +706,7 @@
 		};
 		6F315BEB22D1083400360BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26FE2E3C4AEDA8EA7E102E1F /* Pods-ChuckNorrisJokesAppReduxTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +728,7 @@
 		};
 		6F315BEC22D1083400360BBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3242D8BA9E78D3CF487C55C3 /* Pods-ChuckNorrisJokesAppReduxTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +750,7 @@
 		};
 		6F315BEE22D1083400360BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA91E1618D52C74CC45375E /* Pods-ChuckNorrisJokesAppReduxUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +771,7 @@
 		};
 		6F315BEF22D1083400360BBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E51473047F1A8CEFC681FBD /* Pods-ChuckNorrisJokesAppReduxUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -590,19 +830,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		6F315BC622D1083300360BBC /* ChuckNorrisJokesAppRedux.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6F315BC722D1083300360BBC /* ChuckNorrisJokesAppRedux.xcdatamodel */,
-			);
-			currentVersion = 6F315BC722D1083300360BBC /* ChuckNorrisJokesAppRedux.xcdatamodel */;
-			path = ChuckNorrisJokesAppRedux.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 6F315BB422D1083300360BBC /* Project object */;
 }

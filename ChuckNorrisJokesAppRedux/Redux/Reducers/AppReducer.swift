@@ -9,8 +9,9 @@
 import ReSwift
 
 func appReducer(action: Action, state: AppState?) -> AppState {
-    let state = state ?? AppState(
+    var state = state ?? AppState(
         jokeState: JokeState()
     )
+    state.jokeState = jokeReducer(action: action, state: state.jokeState)
     return state
 }

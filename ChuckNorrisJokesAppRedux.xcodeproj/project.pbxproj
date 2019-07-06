@@ -23,6 +23,10 @@
 		6F315C2422D1162400360BBC /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C2022D1162400360BBC /* Joke.swift */; };
 		6F315C2922D118D100360BBC /* JokeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C2822D118D100360BBC /* JokeActions.swift */; };
 		6F315C2B22D11B3200360BBC /* JokesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C2A22D11B3200360BBC /* JokesReducer.swift */; };
+		6F315C2F22D128EF00360BBC /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C2E22D128EF00360BBC /* UITableViewCellExtension.swift */; };
+		6F315C3122D129D600360BBC /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C3022D129D600360BBC /* UITableViewExtension.swift */; };
+		6F315C3322D12A8300360BBC /* JokeDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C3222D12A8300360BBC /* JokeDetailsCell.swift */; };
+		6F315C3522D12E0400360BBC /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F315C3422D12E0400360BBC /* Spacing.swift */; };
 		CF3006CEF90586BB36C62672 /* Pods_ChuckNorrisJokesAppReduxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4B475701044C5161402A77 /* Pods_ChuckNorrisJokesAppReduxTests.framework */; };
 		EEEE08C42A5163BE24D46E97 /* Pods_ChuckNorrisJokesAppRedux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890B4E7DC455C9C0C6563E5A /* Pods_ChuckNorrisJokesAppRedux.framework */; };
 		FEA8B21182F797D40D63DC24 /* Pods_ChuckNorrisJokesAppReduxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2462C51A9129F0118D3593E6 /* Pods_ChuckNorrisJokesAppReduxUITests.framework */; };
@@ -75,6 +79,10 @@
 		6F315C2022D1162400360BBC /* Joke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		6F315C2822D118D100360BBC /* JokeActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeActions.swift; sourceTree = "<group>"; };
 		6F315C2A22D11B3200360BBC /* JokesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesReducer.swift; sourceTree = "<group>"; };
+		6F315C2E22D128EF00360BBC /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		6F315C3022D129D600360BBC /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		6F315C3222D12A8300360BBC /* JokeDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeDetailsCell.swift; sourceTree = "<group>"; };
+		6F315C3422D12E0400360BBC /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 		890B4E7DC455C9C0C6563E5A /* Pods_ChuckNorrisJokesAppRedux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisJokesAppRedux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA91E1618D52C74CC45375E /* Pods-ChuckNorrisJokesAppReduxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisJokesAppReduxUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisJokesAppReduxUITests/Pods-ChuckNorrisJokesAppReduxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,12 +163,13 @@
 		6F315BBE22D1083300360BBC /* ChuckNorrisJokesAppRedux */ = {
 			isa = PBXGroup;
 			children = (
+				6F315C2C22D128B800360BBC /* Utils */,
 				6F315C0A22D1104900360BBC /* Models */,
 				6F315BFA22D10BC800360BBC /* Repository */,
+				6F315BF022D109E000360BBC /* Joke */,
 				6F315BF722D10ADA00360BBC /* Jokes */,
 				6F315BF222D10A1600360BBC /* Main */,
 				6F315BF122D10A0B00360BBC /* Redux */,
-				6F315BF022D109E000360BBC /* Joke */,
 				6F315BBF22D1083300360BBC /* AppDelegate.swift */,
 				6F315BC922D1083400360BBC /* Assets.xcassets */,
 				6F315BCB22D1083400360BBC /* LaunchScreen.storyboard */,
@@ -191,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				6F315BF322D10A2D00360BBC /* JokeController.swift */,
+				6F315C3222D12A8300360BBC /* JokeDetailsCell.swift */,
 			);
 			path = Joke;
 			sourceTree = "<group>";
@@ -270,6 +280,24 @@
 				6F315C2022D1162400360BBC /* Joke.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6F315C2C22D128B800360BBC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6F315C2D22D128D800360BBC /* Extensions */,
+				6F315C3422D12E0400360BBC /* Spacing.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6F315C2D22D128D800360BBC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6F315C3022D129D600360BBC /* UITableViewExtension.swift */,
+				6F315C2E22D128EF00360BBC /* UITableViewCellExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,15 +523,19 @@
 				6F315BF622D10A4A00360BBC /* MainController.swift in Sources */,
 				6F315C2922D118D100360BBC /* JokeActions.swift in Sources */,
 				6F315C0122D10E1100360BBC /* AppState.swift in Sources */,
+				6F315C2F22D128EF00360BBC /* UITableViewCellExtension.swift in Sources */,
 				6F315C0622D10E5100360BBC /* Store.swift in Sources */,
 				6F315C2422D1162400360BBC /* Joke.swift in Sources */,
 				6F315C0922D10F5000360BBC /* JokeState.swift in Sources */,
 				6F315BF422D10A2D00360BBC /* JokeController.swift in Sources */,
+				6F315C3322D12A8300360BBC /* JokeDetailsCell.swift in Sources */,
 				6F315C2B22D11B3200360BBC /* JokesReducer.swift in Sources */,
 				6F315BC022D1083300360BBC /* AppDelegate.swift in Sources */,
 				6F315BFC22D10BD900360BBC /* JokeService.swift in Sources */,
 				6F315C0322D10E2200360BBC /* AppReducer.swift in Sources */,
+				6F315C3522D12E0400360BBC /* Spacing.swift in Sources */,
 				6F315BF922D10B0300360BBC /* JokesController.swift in Sources */,
+				6F315C3122D129D600360BBC /* UITableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

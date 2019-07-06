@@ -9,5 +9,5 @@
 import ReSwift
 
 struct AppState: StateType {
-    let jokeState: JokeState
+    var jokeState: JokeState
 }

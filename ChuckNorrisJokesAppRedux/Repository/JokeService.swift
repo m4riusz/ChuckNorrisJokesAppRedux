@@ -10,6 +10,8 @@ import Moya
 
 enum JokeService {
     case random
+    case randomFrom(category: String)
+    case categories
 }
 
 extension JokeService: TargetType {
@@ -21,6 +23,10 @@ extension JokeService: TargetType {
         switch self {
         case .random:
             return "/jokes/random"
+        case .randomFrom(_):
+            return "/jokes/random"
+        case .categories:
+            return "/jokes/categories"
         }
     }
     
@@ -34,8 +40,10 @@ extension JokeService: TargetType {
     
     var task: Task {
         switch self {
-        case .random:
+        case .random, .categories:
             return .requestPlain
+        case .randomFrom(let category):
+            return .requestParameters(parameters: ["category": category], encoding: URLEncoding.default)
         }
     }
     

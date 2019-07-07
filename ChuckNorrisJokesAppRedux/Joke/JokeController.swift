@@ -31,7 +31,7 @@ class JokeController: UITableViewController {
     }
 
     fileprivate func initTableView() {
-        self.tableView.register(JokeDetailsCell.self)
+        self.tableView.register(JokeCell.self)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,7 +39,7 @@ class JokeController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueCell(JokeDetailsCell.self, indexPath: indexPath)
+        let cell = tableView.dequeueCell(JokeCell.self, indexPath: indexPath)
         cell.update(item: self.items[indexPath.row])
         return cell
     }

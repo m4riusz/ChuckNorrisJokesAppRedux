@@ -14,7 +14,6 @@ class JokeCell: UITableViewCell {
     
     fileprivate var containerView: UIView?
     fileprivate var jokeImageView: UIImageView?
-    fileprivate var favouriteImageView: UIImageView?
     fileprivate var jokeLabel: UILabel?
     fileprivate var createDateLabel: UILabel?
     
@@ -31,7 +30,6 @@ class JokeCell: UITableViewCell {
     fileprivate func initialize() {
         self.initContainerView()
         self.initJokeImageView()
-        self.initFavouriteImageView()
         self.initJokeLabel()
         self.initCreateDateLabel()
     }
@@ -57,17 +55,6 @@ class JokeCell: UITableViewCell {
         })
     }
     
-    fileprivate func initFavouriteImageView() {
-        self.favouriteImageView = UIImageView()
-        self.containerView?.addSubview(self.favouriteImageView!)
-        
-        self.favouriteImageView?.snp.makeConstraints({ make in
-            make.top.equalToSuperview().offset(Spacing.normal)
-            make.right.equalToSuperview().offset(-Spacing.normal)
-            make.size.equalTo(CGSize(width: 30, height: 30))
-        })
-    }
-    
     fileprivate func initJokeLabel() {
         self.jokeLabel = UILabel()
         self.jokeLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
@@ -78,7 +65,7 @@ class JokeCell: UITableViewCell {
         self.jokeLabel?.snp.makeConstraints({ [unowned self] make in
             make.top.equalToSuperview().offset(Spacing.normal)
             make.left.equalTo(self.jokeImageView!.snp.right).offset(Spacing.normal)
-            make.right.equalTo(self.favouriteImageView!.snp.left).offset(-Spacing.normal)
+            make.right.equalToSuperview().offset(-Spacing.normal)
         })
     }
     
@@ -98,7 +85,6 @@ class JokeCell: UITableViewCell {
     func update(item: Joke) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy mm:HH"
-        self.favouriteImageView?.image = .image(item.favourite ? .star : .starOutline)
         self.createDateLabel?.text = dateFormatter.string(from: item.createdDate)
         self.jokeLabel?.text = item.content
         guard let url = URL(string: item.iconUrl) else {

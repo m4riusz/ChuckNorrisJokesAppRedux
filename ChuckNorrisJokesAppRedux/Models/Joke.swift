@@ -16,7 +16,6 @@ struct Joke: Codable {
     let url: String
     let iconUrl: String
     let categories: [String]
-    let favourite: Bool
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -49,6 +48,5 @@ struct Joke: Codable {
         self.url = try values.decodeIfPresent(String.self, forKey: .url) ?? ""
         self.iconUrl = try values.decodeIfPresent(String.self, forKey: .iconUrl) ?? ""
         self.categories = try values.decodeIfPresent([String].self, forKey: .categories) ?? []
-        self.favourite = false
     }
 }

@@ -11,22 +11,12 @@ import ReSwift
 func jokeReducer(action: Action, state: JokeState?) -> JokeState {
     var state = state ?? JokeState()
     switch action {
-    case _ as JokeActions.Start:
-        state.isLoading = nil
-        state.error = nil
-        state.joke = nil
     case _ as JokeActions.LoadNext:
-        state.isLoading = true
-        state.error = nil
-        state.joke = nil
+        state.state = .loading
     case let action as JokeActions.LoadSuccess:
-        state.isLoading = false
-        state.error = nil
-        state.joke = action.joke
+        state.state = .success(action.joke)
     case let action as JokeActions.LoadError:
-        state.isLoading = false
-        state.error = action.error
-        state.joke = nil
+        state.state = .error(action.error)
     default:
         break
     }

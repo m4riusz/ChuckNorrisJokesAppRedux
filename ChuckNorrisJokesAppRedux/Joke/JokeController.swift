@@ -11,6 +11,7 @@ import ReSwift
 
 class JokeController: UITableViewController {
     
+    fileprivate var stateLabel: UILabel?
     fileprivate var items: [Joke] = []
  
     override func viewDidLoad() {
@@ -19,7 +20,6 @@ class JokeController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         store.subscribe(self)
-        store.dispatch(JokeActions.loadNextJoke())
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -27,11 +27,38 @@ class JokeController: UITableViewController {
     }
     
     fileprivate func initialize() {
+        self.title = "Chuck Norris jokes"
         self.initTableView()
+        self.initStateLabel()
+        self.initRefreshControll()
     }
 
     fileprivate func initTableView() {
         self.tableView.register(JokeCell.self)
+        self.tableView.allowsSelection = false
+        self.tableView.separatorColor = .clear
+    }
+    
+    fileprivate func initStateLabel() {
+        self.stateLabel = UILabel()
+        self.stateLabel?.numberOfLines = 0
+        self.stateLabel?.textAlignment = .center
+        self.stateLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
+        self.tableView.backgroundView = self.stateLabel
+        
+        self.stateLabel?.snp.makeConstraints({ [unowned self] make in
+            make.edges.equalTo(self.tableView.safeAreaLayoutGuide.snp.edges)
+        })
+    }
+    
+    fileprivate func initRefreshControll() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.pulledToRefresh), for: .valueChanged)
+        self.refreshControl = refreshControl
+    }
+    
+    @objc fileprivate func pulledToRefresh() {
+        store.dispatch(JokeActions.loadNextJoke())
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,10 +74,32 @@ class JokeController: UITableViewController {
 
 extension JokeController: StoreSubscriber {
     func newState(state: AppState) {
-        guard let joke = state.jokeState.joke else {
-            return
+        switch state.jokeState.state {
+        case .start:
+            self.items = []
+            self.stateLabel?.text = "Pull to load joke"
+            self.stateLabel?.textColor = .darkGray
+            self.tableView.backgroundView?.isHidden = false
+            self.refreshControl?.endRefreshing()
+        case .loading:
+            self.items = []
+            self.stateLabel?.text = "Loading..."
+            self.stateLabel?.textColor = .darkGray
+            self.tableView.backgroundView?.isHidden = false
+            self.refreshControl?.beginRefreshing()
+        case .success(let joke):
+            self.items = [joke]
+            self.stateLabel?.text = ""
+            self.stateLabel?.textColor = .darkGray
+            self.tableView.backgroundView?.isHidden = true
+            self.refreshControl?.endRefreshing()
+        case .error(let error):
+            self.items = []
+            self.stateLabel?.text = error.localizedDescription
+            self.stateLabel?.textColor = .red
+            self.tableView.backgroundView?.isHidden = false
+            self.refreshControl?.endRefreshing()
         }
-        self.items = [joke]
         self.tableView.reloadData()
     }
 }

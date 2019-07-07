@@ -84,7 +84,7 @@ class JokeCell: UITableViewCell {
     
     func update(item: Joke) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy mm:HH"
+        dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
         self.createDateLabel?.text = dateFormatter.string(from: item.createdDate)
         self.jokeLabel?.text = item.content
         guard let url = URL(string: item.iconUrl) else {
